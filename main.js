@@ -1,5 +1,5 @@
 var svg = $('svg');
-var downloadLink = $('a#save');
+
 var templates = {
   schematics: { x: 40, y: 114 },
   pcb: { x: 21, y: 74 },
@@ -12,6 +12,16 @@ var templates = {
 
 $('body').on('change', 'input', function (e) {
   change($(this).attr('id'), this.checked);
+});
+
+$('button').on('click', function () {
+  var a = document.createElement('a');
+  a.setAttribute('target', '_blank');
+  a.setAttribute('download', 'oshw.svg');
+  a.setAttribute('href', 'data:image/svg+xml;utf8,' + unescape(svg[0].outerHTML));
+  $('body').append(a);
+  a.click();
+  $(a).remove();
 });
 
 function change(what, value) {
@@ -36,10 +46,4 @@ function createText(what) {
   text.setAttribute('fill', '#ffffff');
   text.textContent = what.charAt(0).toUpperCase();
   return text;
-}
-
-function updateLink() {
-  svg[0].removeAttribute('width');
-  downloadLink.attr('href', 'data:image/svg+xml;utf8,' + unescape(svg[0].outerHTML));
-  svg.attr('width', '500');
 }
