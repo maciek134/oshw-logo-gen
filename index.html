@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>OSHW Logo Generator</title>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 </head>
+
 <body>
     <p>OSHW Logo generator, based on Dave's idea (<a href="http://www.eevblog.com/forum/blog/eevblog-921-open-source-hardware-problems-solved!/">http://www.eevblog.com/forum/blog/eevblog-921-open-source-hardware-problems-solved!/</a>)</p>
-    <p><input id="schematics" type="checkbox" checked><label for="schematics">Schematics</label></p>
-    <p><input id="pcb" type="checkbox" checked><label for="pcb">PCB</label></p>
-    <p><input id="firmware" type="checkbox" checked><label for="firmware">Firmware and/or Software</label></p>
-    <p><input id="mechanical" type="checkbox" checked><label for="mechanical">Mechanical CAD files</label></p>
-    <p><input id="documentation" type="checkbox" checked><label for="documentation">Design Documentation</label></p>
-    <p><input id="bom" type="checkbox" checked><label for="bom">Bill Of Materials</label></p>
-    <p><input id="commercial" type="checkbox" checked><label for="commercial">License used does NOT restrict Non-Commercial use</label></p>
-    <p><a id="save" href="#" download="oshw.svg" target="_blank">Save</a></p>
-    <svg width="500" version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 x="0px" y="0px" viewBox="0 0 172.238 180.994" xml:space="preserve">
+    <div id="controls">
+        <input id="schematics" type="checkbox" checked><label for="schematics">Schematics</label><br>
+        <input id="pcb" type="checkbox" checked><label for="pcb">PCB</label><br>
+        <input id="firmware" type="checkbox" checked><label for="firmware">Firmware and/or Software</label><br>
+        <input id="mechanical" type="checkbox" checked><label for="mechanical">Mechanical CAD files</label><br>
+        <input id="documentation" type="checkbox" checked><label for="documentation">Design Documentation</label><br>
+        <input id="bom" type="checkbox" checked><label for="bom">Bill Of Materials</label><br>
+        <input id="commercial" type="checkbox" checked><label for="commercial">License used does NOT restrict Non-Commercial use</label><br>
+        <a id="save" href="#" download="oshw.svg" target="_blank"><button type="button">Save</button></a><!--a bit of a hack, doesnt support ie 8 remove if needed-->
+        </p>
+    </div>
+
+    <div id="preview">
+        <svg width="500" version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 172.238 180.994" xml:space="preserve">
         <path fill="#0099B0" d="M152.336,57.604l-16.439-3.057c-0.4-0.075-0.838-0.451-0.973-0.837l-5.039-11.756
             c-0.188-0.363-0.152-0.933,0.08-1.271l9.578-13.96c0.229-0.336,0.184-0.847-0.105-1.136l-11.963-11.963
             c-0.289-0.289-0.799-0.336-1.135-0.105l-14.205,9.748c-0.336,0.231-0.912,0.272-1.277,0.092l-11.396-4.665
@@ -111,7 +117,9 @@
         <text id="d" x="118.5" y="35" font-family="Ubuntu" font-size="20" font-weight="bold" fill="#ffffff">D</text>
         <text id="b" x="137" y="74" font-family="Ubuntu" font-size="20" font-weight="bold" fill="#ffffff">B</text>
         <text id="c" x="118.5" y="114" font-family="Ubuntu" font-size="20" font-weight="bold" fill="#ffffff">C</text>
-</svg>
+        </svg>
+    </div>
     <script src="main.js"></script>
 </body>
+
 </html>
