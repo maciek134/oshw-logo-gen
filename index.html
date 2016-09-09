@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>OSHW Logo Generator</title>
+    <style>
+      #controls{float:left;}
+      #preview{float:left;}
+    </style>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 </head>
@@ -18,7 +22,8 @@
         <input id="documentation" type="checkbox" checked><label for="documentation">Design Documentation</label><br>
         <input id="bom" type="checkbox" checked><label for="bom">Bill Of Materials</label><br>
         <input id="commercial" type="checkbox" checked><label for="commercial">License used does NOT restrict Non-Commercial use</label><br>
-        <a id="save" href="#" download="oshw.svg" target="_blank"><button type="button">Save</button></a><!--a bit of a hack, doesnt support ie 8 remove if needed-->
+        <a id="save" href="#" download="oshw.svg" target="_blank"><button type="button">Save</button></a>
+        <!--a bit of a hack, doesnt support ie 8 remove if needed-->
         </p>
     </div>
 
