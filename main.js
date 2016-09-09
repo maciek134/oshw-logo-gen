@@ -1,5 +1,5 @@
 var svg = $('svg');
-var downloadLink = $('a');
+var downloadLink = $('a#save');
 var templates = {
   schematics: { x: 40, y: 114 },
   pcb: { x: 21, y: 74 },
