@@ -70,7 +70,7 @@ $('button').on('click', function () {
   var a = document.createElement('a');
   a.setAttribute('target', '_blank');
   a.setAttribute('download', 'oshw.svg');
-  a.setAttribute('href', 'data:image/svg+xml;utf8,' + unescape(svg[0].outerHTML));
+  a.setAttribute('href', 'data:image/svg+xml;utf8,' + unescape(svg[0].outerHTML).replaceAll("#", "%23"));
   $('body').append(a);
   a.click();
   $(a).remove();
